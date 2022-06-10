@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=chennai,delhi,hyderabad"
+    "https://hotel-reservation-applicationn.herokuapp.com/api/hotels/countByCity?cities=chennai,delhi,hyderabad"
   );
 
   return (
