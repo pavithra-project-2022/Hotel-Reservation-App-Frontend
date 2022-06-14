@@ -41,7 +41,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="navItems">
-            <button className="navButton">Register</button>
+            <button className="navButton" style={{ color: "inherit", textDecoration: "none" }}>Register</button>
             <Link
               to="/login"
               style={{ color: "inherit", textDecoration: "none" }}

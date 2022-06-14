@@ -1,6 +1,5 @@
 .featured{
   width: 100%;
-  max-width: 1024px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -26,4 +25,19 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+ 
+  .featuredItem{
+    height: 200px;
+  }
+ 
+  
+  .featuredTitles{
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    font-size: 8px;
+  }
 }

@@ -1,6 +1,5 @@
 .footer{
   width: 100%;
-  width: 1024px;
   font-size: 12px;
 }
 
@@ -21,3 +20,11 @@
   color: #003580;
   cursor: pointer;
 }
+@media (min-width: 0px) and (max-width: 700px) {
+  .footer{
+    width: 100%;
+    font-size: 8px;
+  }
+  
+}
+

@@ -6,7 +6,6 @@
 
 .listWrapper {
   width: 100%;
-  max-width: 1024px;
   display: flex;
   gap: 20px;
 }
@@ -80,4 +79,74 @@
 
 .listResult {
   flex: 3;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  .listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .listWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .listSearch {
+    background-color: #febb02;
+    padding: 2px;
+    border-radius: 10px;
+    top: 5px;
+  }
+  
+  .lsTitle{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .lsItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .lsItem>label{
+    font-size: 12px;
+  }
+  
+  .lsItem>input{
+    height: 20px;
+    padding: 5px;
+  }
+  .lsItem>span{
+    height: 20px;
+    padding: 5px;
+  }
+  
+  .lsOptions{
+    padding: 5px;
+  }
+  
+  .lsOptionItem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 12px;
+  }
+  
+  .lsOptionInput{
+    width: 100px;
+  }
+  
+  .listSearch>button{
+    padding: 5px;
+  }
+  
+  
 }

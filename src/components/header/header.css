@@ -8,7 +8,6 @@
 
 .headerContainer {
   width: 100%;
-  max-width: 1024px;
   margin: 20px 0px 100px 0px;
 }
 
@@ -125,4 +124,48 @@
 
 .optionCounterButton:disabled {
   cursor: not-allowed;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  .headerList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .headerListItem {
+    width: 120px;
+  }
+
+  .headerListItem.active {
+    border-radius: 20px;
+  }
+  .headerTitle {
+    font-size: 25px;
+  }
+
+  .headerDesc {
+    margin: 10px 0px;
+    font-size: 10px;
+  }
+
+  .headerSearch {
+    height: 90px;
+    flex-direction: column;
+    padding: 10px 0px;
+  }
+
+  .headerSearchItem {
+    border-bottom: 0.5px solid rgb(197, 195, 195);
+  }
+
+  .headerSearchText {
+    color: lightgray;
+    cursor: pointer;
+  }
+
+  .options {
+    top: 70px;
+  }
 }
