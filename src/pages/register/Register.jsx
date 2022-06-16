@@ -84,6 +84,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Sign Up
         </button>
+        <p onClick={()=>navigate('/login')} style={{fontSize:"12px",cursor:"pointer"}}>Already registered?Sign In</p>
         {error && <span>{error.message}</span>}
       </div>
     </div>
