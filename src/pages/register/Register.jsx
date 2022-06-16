@@ -2,12 +2,16 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import "./login.css";
+import "../login/login.css";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
+    email:undefined,
     username: undefined,
     password: undefined,
+    city:undefined,
+    country:undefined,
+    phone:undefined
   });
 
   const { loading, error, dispatch } = useContext(AuthContext);
@@ -22,9 +26,9 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("https://hotel-reservation-applicationn.herokuapp.com/api/auth/login", credentials);
+      const res = await axios.post("https://hotel-reservation-applicationn.herokuapp.com/api/auth/register", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
-      navigate("/")
+      navigate("/login")
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
@@ -34,12 +38,18 @@ const Login = () => {
   return (
     <div className="login">
       <div className="lContainer">
-        <p><strong><u>Wlecome to SmartBooking</u></strong></p>
-        UserName : user1<br/>Password  : 123456<br/>
+      <p><strong><u>Wlecome to SmartBooking</u></strong></p>
         <input
           type="text"
           placeholder="username"
           id="username"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
+          type="email"
+          placeholder="email"
+          id="email"
           onChange={handleChange}
           className="lInput"
         />
@@ -50,10 +60,30 @@ const Login = () => {
           onChange={handleChange}
           className="lInput"
         />
+        <input
+          type="text"
+          placeholder="country"
+          id="country"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
+          type="text"
+          placeholder="city"
+          id="city"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
+          type="text"
+          placeholder="phone"
+          id="phone"
+          onChange={handleChange}
+          className="lInput"
+        />
         <button disabled={loading} onClick={handleClick} className="lButton">
-          Login
+          Sign Up
         </button>
-        <p onClick={()=>navigate('/register')} style={{fontSize:"12px",cursor:"pointer"}}>New?Sing Up</p>
         {error && <span>{error.message}</span>}
       </div>
     </div>

@@ -62,7 +62,7 @@ const Reserve = ({ setOpen, hotelId }) => {
         })
       );
       setOpen(false);
-      navigate("/");
+     
     } catch (err) {}
   };
   return (
@@ -99,9 +99,9 @@ const Reserve = ({ setOpen, hotelId }) => {
             </div>
           </div>
         ))}
-        <button onClick={handleClick} className="rButton">
+        <a href="https://rzp.io/l/lgGt0T7BE" style={{textDecoration:"none"}} target="_blank" rel="noreferrer" onClick={handleClick} className="rButton">
           Reserve Now!
-        </button>
+        </a>
       </div>
     </div>
   );
